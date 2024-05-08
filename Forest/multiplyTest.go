@@ -1,6 +1,6 @@
 package main
 
-func multiplyBurnSimulationIncreasingProbability(n int) []map[int]float64 {
+func multiplyBurnSimulationIncreasingProbability(n int) []map[int]float64 { //how many trees are burned with increasing forest density
 	result := make([]map[int]float64, 0)
 	for i := 0; i < 100; i++ {
 		sum := 0.0
@@ -16,7 +16,7 @@ func multiplyBurnSimulationIncreasingProbability(n int) []map[int]float64 {
 	return result
 }
 
-func howManyTreesStayedSimulation(n int) []map[int]float64 {
+func howManyTreesStayedSimulation(n int) []map[int]float64 { //how many trees stayed in forest with increasing forest density
 	result := make([]map[int]float64, 0)
 	for i := 0; i < 100; i++ {
 		sum := 0

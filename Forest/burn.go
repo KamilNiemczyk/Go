@@ -5,7 +5,7 @@ import (
 	"math/rand"
 )
 
-func burnTree(board [][]map[string]int, x int, y int) {
+func burnTree(board [][]map[string]int, x int, y int) { //burn tree
 	age := board[x][y]["age"]
 	if board[x][y]["burned_percentage"] < 100 {
 		if age <= 2 {
@@ -24,7 +24,7 @@ func burnTree(board [][]map[string]int, x int, y int) {
 	}
 }
 
-func expandFire(board [][]map[string]int, x int, y int) {
+func expandFire(board [][]map[string]int, x int, y int) { //expand fire
 	if x-1 >= 0 {
 		if board[x-1][y]["is_tree"] == 1 && board[x-1][y]["how_many_times_burnes"] < 3 {
 			burnTree(board, x-1, y)
@@ -67,7 +67,7 @@ func expandFire(board [][]map[string]int, x int, y int) {
 	}
 }
 
-func randomStrike(board [][]map[string]int) {
+func randomStrike(board [][]map[string]int) { //random strike of lightning
 	x := rand.Intn(len(board))
 	y := rand.Intn(len(board[0]))
 	if board[x][y]["is_tree"] == 1 {

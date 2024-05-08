@@ -1,1 +1,1 @@
-# Go
+# Go language course
